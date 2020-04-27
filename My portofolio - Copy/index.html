@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My protofolio</title>
+	<link rel="stylesheet" href="">
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+	html{
+         scroll-behavior:smooth;
+	}
+        *{margin: 0;padding:0;  font-family: 'Roboto Condensed', sans-serif;}
+
+   button#flip {
+       border-bottom-left-radius: 20px;
+       border-bottom-right-radius: 20px;
+       border-top-left-radius: 20px;
+       border-top-right-radius: 20px;
+       animation-delay: 2s;
+}
+   .carousel-inner img {
+      width: 100%;
+    /* clip-path: polygon(100% 0%,100% 94%,50% 100%,0 94%,0 0); */
+      ;
+  }
+  .fact-box {
+    padding: 20px;
+    text-align: center; 
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered h3 {
+    color: #2196F3;
+    font-size: 34px;
+    text-shadow: 0px 4px 0px #CDDC39;
+}
+section.skill--1.animated.zoomIn {
+    background-color: whitesmoke;
+    height: 260px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("img/skill.jpg");
+    background-size: cover;
+}
+#panel{
+ 
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+#panel{
+ 
+  background-color: whitesmoke;
+  border: solid 1px whitesmoke;
+}
+#panel {
+  
+  display: none;
+}
+div#panel {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /* animation-delay: 2s; */
+    /* margin-bottom: 17px; */
+}
+p{font-size:  24px;}
+i.fa.fa-html5.fa-4x {
+    color: #e44d26;
+}
+i.fa.fa-css3.fa-4x {
+    color: #0170ba;
+}
+i.fa.fa-file-code-o.fa-4x {
+    color: #dede07;
+}
+i.fa.fa-hashtag.fa-4x {
+    color: steelblue;
+}
+i.fa.fa-user.fa-2x{color:#a0c3ff;}
+
+i.fa.fa-google.fa-2x{color:#a0c3ff;} 
+i.fa.fa-envelope.fa-2x{color:#a0c3ff;}
+i#insta {
+    /* background: #d6249f; */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+i#likendin {
+    color: #0e76a8;
+}
+i#skype {
+    color:steelblue;
+}
+p {
+    color:black;
+    font-size: x-large;
+    font-weight: 300;
+}
+div#work {
+    background-color: whitesmoke;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("img/work.jpg");
+    background-size: cover;
+
+}
+.progress {
+  height: 35px;
+
+}
+.progress .skill {
+  font: normal 12px "Open Sans Web";
+   line-height: 35px;
+   padding: 0;
+   margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
+        .progress .skill .val  {
+            float: right;
+  font-style: normal;
+  margin: 0 20px 0 0;
+}
+
+.progress-bar {
+  text-align: left;
+  transition-duration: 3s;
+}
+<!-- section.fact-area { -->
+    <!-- background-image: linear-gradient(50deg, #2196F3, transparent); -->
+	<!-- box-shadow: 1px -1px #2196f3; -->
+<!-- } -->
+.col-lg.col-6.single-fact {
+    border-right: 1px solid #9e9e9e3b;
+}
+#loading{
+	  position: fixed;
+	  width: 100%;
+	  height: 100vh;
+	  background: #fff url('img/loading.gif')no-repeat center ;
+	  z-index: 1;
+}
+ #menu a:hover{border-bottom:3px solid red;}
+ div#arrow {
+    <!-- width: 100%; -->
+    text-align: end;
+    text-align: end;
+    font-size: -webkit-xxx-large;
+}
+i#up {
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: tan;
+    padding: 5px;
+    color: slategray;
+	
+}
+#up:hover {
+    background-color: #F44336;
+    color: green;
+}
+   .about--part1.about--part2.work--1.skill--1.contact--1.project{
+     opacity:0;
+	 }
+	 
+     .about--part1.about--part2.work--1.skill--1.contact--1.project.animated{
+    
+     opacity:1;
+	 }
+
+#c1 h3,#c2 h3,#c3 h3,h1.text-center {
+	font-family: 'Bangers', cursive;
+}
+section#contact {
+   background-image: linear-gradient(to top left, #03a9f41c 50%, #ffeb3b17 50%);
+   background-attachment:fixed;
+}
+div#about {
+    background-image: linear-gradient(to top left, #03a9f41c 50%, #ffeb3b17 50%);
+    background-attachment: fixed;
+}
+section {
+    background-image: linear-gradient(to top left, #03a9f41c 50%, #ffeb3b17 50%);
+    background-attachment: fixed;
+}
+button.btn.btn-primary {
+    margin-bottom: 20;
+    margin-bottom: 20px;
+}
+  </style>
+
+
+</head>
+<body onload="myfunc()">
+	<div id="loading"></div>
+	<header id="header">
+<!--<div class="container">-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+  <a class="navbar-brand" href="#"><img src="img/pro.jpg" class="animated infinite tada delay-2s"></a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto text-center text-capitalize ">
+      <li class="nav-item active" id="menu">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active"id="menu">
+        <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+        </li>
+         <li class="nav-item active"id="menu">
+        <a class="nav-link" href="#counter">Work <span class="sr-only">(current)</span></a>
+        </li>
+         <li class="nav-item active"id="menu">
+        <a class="nav-link" href="#skills">Skill <span class="sr-only">(current)</span></a>
+        </li>
+           <li class="nav-item active"id="menu">
+        <a class="nav-link" href="#project">Project <span class="sr-only">(current)</span></a>
+        </li>
+         <li class="nav-item active"id="menu">
+        <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    
+  </div>
+              </div>
+</nav>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" >
+      <img src="img/1.jpg" alt="1" width="1100" height="650">
+      <div class="centered"id="c1"><h3>IT ASPIRANT</h3></div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/1.jpg" alt="Chicago" width="1100" height="650">
+        <div class="centered"id="c2"><h3>SURAJ KUMAR SHARMA</h3></div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/1.jpg" alt="New York" width="1100" height="650">
+        <div class="centered"id="c3"><h3>WEB DESIGNER/WEB DEVELOPER</h3></div>
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>      
+</header>
+<section id="about">
+<!-- about start -->
+  <section >
+  	<div class="container-fluid"id="about">
+	<br><br><br>
+  		<h1 class="text-center">About</h1>
+  		<center><hr class="w-25 "></center>
+         <div class="row mb-5">
+           <div class="col-lg-6 col-md-6 col-12 about--part1">
+           	 <img src="img/me.jpg" style="width:500px; height: 400px;" class="img-fluid"id="my photo" >
+           </div>
+           <div class="col-lg-6 col-md-6 col-12 about--part2">
+           	<h3 class="font-weight-bold text-justify fo">"I am SURAJ KUMAR SHARMA, I am IT aspirant 
+           	as web designer or web developer .I have completed 
+            B.TECH/IT  in the year of 2017 from Asansol Enginnering college......For further information 
+           	click below button. </h3>
+             <button class="btn btn-outline-primary btn-block " id="flip">click me</button><br>
+              <div  class="container"id="panel"><br>
+              	<h1 class=""><i class="fa fa-hand-o-right text-success "></i>&nbsp&nbsp Carrer Objective</h3>   
+  <hr/>
+  <p class="font-weight-bold text-justify ">To get a growth oriented position in a reputed organization , where my skills can be utilized for improvement and sucess of the organization</p>
+  <hr/>
+    <h1 class=""><i class="fa fa-graduation-cap "></i>&nbsp&nbsp Educational Details</h1>   
+  <hr/>
+   <table class="table table-hover font-weight-bold">
+    <thead class="thead-dark">
+      <tr>
+        <th >Degree</th>
+		<th>Board</th>
+        <th >Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+	<tr>
+        <td >Maulana Abdul Kalam Azad University(WB)</td>
+        <td >BTECH(Information Technology)</td>
+        <td>7.37 DGPA</td>
+      </tr>
+	<tr>
+        <td>CBSE,Delhi</td>
+        <td>Class XII</td>
+        <td>50%</td>
+      </tr>
+      
+      <tr>
+        <td>CBSE,Delhi</td>
+        <td>Class X</td>
+        <td>7.0 CGPA</td>
+      </tr>
+    </tbody>
+  </table>  <hr/>
+  <h1 class=""><i class="fa fa-certificate text-shadow"></i>&nbsp&nbsp Certificate</h1>   
+  <hr/>
+   <table class="table table-hover font-weight-bold">
+    <thead class="thead-dark">
+      <tr>
+        <th >Organisation</th>
+		<th>Project</th>
+        <th >Period</th>
+      </tr>
+    </thead>
+    <tbody>
+	<tr>
+         <td >M/s TECH BENCH</td>
+		<td>"Online Shopping Cart"(ASP.NET using C#)</td>
+        <td >Form 30 june 2016 to 07 Aug 2016</td>
+      </tr>
+      <tr>
+        <td >Vedas Technocrats, Serampore, Hooghly</td>
+        <td >Web Design, using HTML5, CSS3, Javascript, JQuery and Bootstrap3</td>
+        <td> From March 2018 to May 2018</td>
+      </tr>
+      <tr>
+        <td>Internshala</td>
+        <td>Web Development(using HTML5, CSS3, Javascript, JQuery and Bootstrap3)</td>
+        <td>From 1st Oct.2019 to 12th Nov’2019</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  
+              </div>
+           </div>
+         </div>
+
+  	 </div>  
+<!-- <br><br><br><br>	  -->
+  </section>
+ </section>
+  <hr>
+  <hr id="counter">
+
+<br><br>
+<section  >
+
+<h1 class="text-center text-dark "> Work </h1>
+  		<center><hr class="w-25"></center>
+<div class="container-fluid work--1" id="work">
+<!-- <h1 class="text-center text-dark"> Work </h1> -->
+  		<!-- <center><hr class="w-25"></center> -->
+
+
+
+<section class="fact-area" >
+
+<div class="container-fluid ">
+  		
+  <div class="container">
+    <div class="fact-box ">
+      <div class="row">
+        <div class="col-lg col-6 single-fact">
+         <i class="fa fa-html5 fa-4x"arial-hidden="true"></i>
+        <h2 class="count text-white">90</h2>
+        <p class="text-white">HTML5</p>
+      </div>
+      <div class="col-lg col-6 single-fact">
+        <i class="fa fa-css3 fa-4x"arial-hidden="true"></i>
+        <h2 class="count text-white">90</h2>
+        <p class="text-white">CSS3</p>
+      </div>
+      <div class="col-lg col-6 single-fact">
+        <i class="fa fa-file-code-o fa-4x"arial-hidden="true" ></i> 
+        
+        <h2 class="count text-white">50</h2>
+        <p class="text-white">JAVASCRIPT/JQUERY</p>
+      </div>
+      <div class="col-lg col-6 single-fact">
+        <i class="fa fa-hashtag fa-4x"arial-hidden="true" ></i>
+        <h2 class="count text-white">50</h2>
+        <p class="text-white">c/c++</p>
+      </div>
+    
+      <!-- <div class="col-lg col-6 single-fact">
+        <i class="fa fa-linkedin fa-4x"arial-hidden="true" ></i>
+        <h2 class="count">50</h2>
+        <p>Connection </p>
+      </div> -->
+    </div>
+  </div
+  
+  
+      </section>
+        </section>
+</div>
+<br><br><br><br><br>
+<hr> 
+ <hr id="skills">
+<br><br><br>
+<h1 class="text-center text-dark">Skill </h1>
+  		<center><hr class="w-25"></center>
+
+<section class="skill--1" >
+  <br>
+<div class="container">
+  <div class="row">
+  
+    <div class="col-sm-9">
+      <div class="container  "id="progress">
+         <div class="progress skill-bar "style="height:50%"> 
+		 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill">HTML5 <i class="val">80%</i></span>
+                </div>
+            </div><br>
+                
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
+                    <span class="skill">CSS3<i class="val">80%</i></span>
+                </div>
+            </div><br>
+            
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill">JavaScript/Jquery<i class="val">75%</i></span>
+                </div>
+            </div> <br> 
+            
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill">Php<i class="val">55%</i></span>
+                </div>
+            </div>  
+    </div>
+  </div>
+</div>
+
+</section> 
+<!-- skill end-->
+<!-- <br><br><br><br> -->
+
+<!-- contact end -->
+<!-- Gallery start -->
+
+<section id="project">
+<br><br>
+		<div class="container"id="gallery">
+  		<h1 class="text-center ">Project</h1>
+  		<center><hr class="w-25 pt-8"></center>
+ <div class="row project">
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/website%201/" target="_blank"><img src="img/wb1.jpg" class="img-fluid"></a>
+ 		
+ 	</div>
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/2/EMI.html" target="_blank"><img src="img/wb2.jpg" class="img-fluid"></a>
+ 	</div>
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/website%201/snake.html" target="_blank"><img src="img/wb3.jpg" class="img-fluid"></a>
+ 	</div>
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/website%201/dob.html" target="_blank"><img src="img/wb4.jpg" class="img-fluid"></a>
+ 	</div>
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/website%201/validation.html" target="_blank"><img src="img/wb5.jpg" class="img-fluid"></a>
+ 	</div>
+ 	<div class="col-lg-4 col-md-2 mb-4">
+ 		<a href="https://e2o1b4bdgknfzmz6ilyyoa-on.drv.tw/website%201/BMIcalc.html" target="_blank"><img src="img/wb6.jpg" class="img-fluid"></a>
+ 	</div>
+ </div>
+</div>
+	</section>
+</section>
+<hr><hr>
+<br><br>
+
+<section id="contact"class="contact--1">
+		<div class="container">
+			<br><br><br>
+	  		<h1 class="text-center ">contact us</h1>
+  		<center><hr class="w-25 pt-8"></center>
+  <div class="w-50 mx-auto">
+  		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI5mb_SKlVSIL6DHRmOJFnPKcHxF4PSntlMuH3B5gERjVEdQ/formResponse"method="post">
+  			<div class="form-group">
+        <i class="fa fa-user fa-2x"></i>&nbsp&nbsp <label for="email">Name:</label>
+         <input type="text" class="form-control" placeholder="Enter names" id="name"name="entry.1636315630"autocomplete="off">
+         </div>
+         <div class="form-group">
+        <i class="fa fa-google fa-2x"></i>&nbsp&nbsp<label for="email">Email address:</label>
+         <input type="text" class="form-control" placeholder="Enter email" id="email"name="entry.1818578513"autocomplete="off">
+         </div>
+         <div class="form-group">
+         <i class="fa fa-envelope fa-2x"></i>&nbsp&nbsp<label for="msg">Message:</label>
+          <textarea id="txt" class="md-textarea form-control" rows="3"maxlength="1000"placeholder="Write your message "autocomplete="off"name="entry.1962172443"></textarea>
+         </div>
+       <!--   <div class="form-group form-check">
+         <label class="form-check-label">
+         <input class="form-check-input" type="checkbox"> Remember me
+      </label>
+     </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</section>
+</section>
+
+<footer class="bg-dark text-center text-white ">
+	<div class="container">
+  <div class="row">
+    <div class="col-sm-6 text-white text-light">
+      <p class="text-white"> This Protofolio site is Designed and Developed by <br>Suraj Kumar Sharma</p>
+      
+    </div>
+    
+    <div class="col-sm-4">
+     
+   <p class="text-white"> FOLLOW ME<br><a href="https://www.facebook.com/surajkumar.sharma.1422" target="_blank"><i class="fa fa-facebook-official"id="facebook"></a></i>&nbsp&nbsp
+    <a href="https://www.instagram.com/su1305/" target="_blank"><i class="fa fa-instagram"id="insta"></i></a>&nbsp&nbsp<a href="https://www.likedin.com/feed/" target="_blank"><i class="fa fa-linkedin"id="likendin"></i></a>&nbsp&nbsp<a href="live:.cid.1583d5778510afc3"><i class="fa fa-skype" id="skype"></i></a>
+         </p>
+     </div>
+ <div class="col-sm-2 "id="arrow">
+      <a href="#header"> <i class="fa fa-arrow-up"id="up"></i></a>
+
+    </div>
+</div>
+
+</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	//preloader//
+	var preloader=document.getElementById("loading");
+	function myfunc(){
+       preloader.style.display="none";
+       	}
+   //preloader end//
+  $('.count').counterUp({
+    delay: 10,
+    time: 3000
+});
+  $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+ $(document).ready(function() {
+ 	      $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+                });
+    });
+	//scroll //
+	$(document).ready(function(){ 
+	    $(".about--part1").waypoint(function(direction){ 
+	   
+				$(".about--part1").addClass("animated zoomIn");
+				 },{
+				  offset:'50%'
+				 });
+				  $(".about--part2").waypoint(function(direction){ 
+			   
+				$(".about--part2").addClass("animated fadeInUp");
+				 },{
+				  offset:'50%'
+				 });
+				 $(".work--1").waypoint(function(direction){ 
+			   
+				$(".work--1").addClass("animated zoomIn");
+				 },{
+				  offset:'50%'
+				 });
+		        $(".skill--1").waypoint(function(direction){ 
+			   
+				$(".skill--1").addClass("animated zoomIn");
+				 },{
+				  offset:'50%'
+				 }); 
+				 $(".contact--1").waypoint(function(direction){ 
+			   
+				$(".contact--1").addClass("animated fadeInUp");
+				 },{
+				  offset:'50%'
+				 });
+				 $(".project").waypoint(function(direction){ 
+			   
+				$(".project").addClass("animated fadeInUp");
+				 },{
+				  offset:'50%'
+				 });
+	 });
+	 
+</script>
+</body>
+</html>
